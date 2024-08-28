@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/home.css"
+    
+
+   
+</head>
+<title>Fishylish Home</title>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="position-sticky">
+                    <button class="btn btn-primary d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="sidebarMenu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse d-md-block" id="sidebarMenu">
+                        <ul class="nav flex-column">
+                        
+                            <div class="collapse d-md-block" id="sidebarMenu">
+                                <img src="../src/fish.png" alt="Icon Description" class="icon-class">
+                                <span class="title-text"><b>FISHYLISH</b></span>
+                            </div>
+                            <hr>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="loadPage('dashboard.html')">
+                                    <i class="fa-brands fa-slack"></i>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="loadPage('sales.html')">
+                                    <i class="fa-solid fa-coins"></i>
+                                    Sales and Inventory
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="loadPage('export.html')">
+                                    <i class="fa-solid fa-ship"></i>
+                                    Exportation
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="loadPage('report.html')"">
+                                    <i class="fa-solid fa-scroll"></i>
+                                    Report
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="loadPage('users.html')"">
+                                    <i class="fa-solid fa-user-group"></i>
+                                    User Management
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa-solid fa-users-viewfinder"></i>
+                                    Activity Log
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa-solid fa-gear"></i>
+                                    Settings
+                                </a>
+                            </li>
+                            <hr>
+                            
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="#" class="btn btn-danger w-100">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main role="main" class="col-md-9 ms-sm-auto col-lg-10 id="main-content" style="padding: 0px;">
+                <iframe id="content-frame" src="dashboard.html"></iframe>
+<!--                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">-->
+                   
+                </div>
+               
+            </main>
+        </div>
+    </div>
+
+   
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+   <script>
+        // Function to load a new page within the iframe
+        function loadPage(page) {
+            document.getElementById('content-frame').src = page;
+        }
+    </script>
+
+</body>
+</html>
